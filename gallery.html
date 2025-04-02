@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>KING'Sconcept Gallery</title>
+</head>
+<body>
+    <header>
+        <h3>KING'Sconcept</h3>
+        <nav class="top-bar">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn">
+            <i class='bx bx-menu'></i>
+        </button>
+    </header>
+
+    <div class="mobile-nav">
+        <button class="close-menu">✕</button>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <section class="featured-work">
+        <div class="container">
+            <h3>Featured Work</h3>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="4.jpg" alt="Photo 1" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_6173-.jpg" alt="Photo 2" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_6930.jpg" alt="Photo 3" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_8415.jpg" alt="Photo 4" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_9171.jpg" alt="Photo 5" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/jpg-8.jpg" alt="Photo 6" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_1120.jpg" alt="photo 7" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/IMG_8777.jpg" alt="photo 8" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/26.jpg" alt="photo 9" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/26.jpg" alt="photo 10" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/006A4525.jpg" alt="photo 11" loading="lazy">
+                </div>
+                <div class="grid-item">
+                    <img src="/images/26.jpg" alt="photo 12" loading="lazy">
+                </div>
+            </div>
+            <div class="view">
+                <button class="view-more">
+                    <a href="https://www.instagram.com/__kings_concepts__/" target="_blank"
+                       onclick="window.location.href='instagram://user?username=__kings_concepts__';">View more</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+        });
+        
+        closeMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
+
