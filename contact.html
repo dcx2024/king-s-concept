@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h3>KING'Sconcept</h3>
+        <button class="mobile-menu-btn" onclick="openSidebar()">
+            <i class='bx bx-menu'></i>
+          </button>
+        </header>
+      
+        <!-- Overlay -->
+        <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+      
+        <!-- Sidebar -->
+        <nav class="mobile-nav-bar" id="mobileSidebar">
+          <span class="close-btn" onclick="closeSidebar()">×</span>
+          <a href="index.html">HOME</a>
+          <a href="gallery.html">GALLERY</a>
+          <a href="#">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+        </header> 
+
+<section class="bottom">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Whether you have questions, feedback, or just want to connect, feel free to reach out. Our team is here to assist you and make your experience as seamless as possible.</p>
+        <button> <a href="https://wa.me/+2347026538037" target="_blank"
+            onclick="window.location.href='whatsapp://send?phone=+2347026538037';">Get in Touch</a></button>
+    </div>
+    <div class="container" >
+    <h3>Get in Touch</h3>
+    <p><strong>Phone: </strong>number</p>
+    <p><strong>Email: </strong>ihedoroking@gmail.com</p>
+</div>
+<hr>
+<div class="container">
+    <h3>Follow Us:</h3>
+    <p>Stay connected with us on social media for the latest updates, news, and behind-the-scenes content:</p>
+    <p><strong>Instagram: </strong>    <a href="https://www.instagram.com/__kings_concepts__/" target="_blank"
+        onclick="window.location.href='instagram://user?username=__kings_concepts__';">KING'Sconcepts</a></p>
+    <p><strong>Tiktok: </strong> <a href="https://www.tiktok.com/@__kings_concepts__?_t=ZM-8v95EQ8fET1&_r=1"
+        target="_blank">KING'Sconcepts</a></p>
+</div>
+</section>
+<footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h4>KING'Sconcepts</h4>
+            <p>Professional photographer capturing moments that tell compelling stories through creative and artistic vision.</p>
+        </div>      
+
+        <div class="footer-nav">
+            <ul>
+                <li class="list-title">Navigation</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-connect">
+            <ul>
+                <li class="list-title">Connect</li>
+                <li class="social-icons">
+                    <a href="https://www.instagram.com/__kings_concepts__/" target="_blank"
+                    onclick="window.location.href='instagram://user?username=__kings_concepts__';">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://wa.me/+2347026538037" target="_blank"
+                    onclick="window.location.href='whatsapp://send?phone=+2347026538037';">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@__kings_concepts__?_t=ZM-8v95EQ8fET1&_r=1"
+                     target="_blank">
+                    <i class='bx bxl-tiktok'></i>
+                 </a>
+                 
+                </li>
+            </ul>
+
+            <ul class="contact-info">
+                <li class="list-title">Contact</li>
+                <li>ihedoroking@gmail.com</li>
+                <li>+2347026538037</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 King's Concepts Photography. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    const sidebar = document.getElementById("mobileSidebar");
+ const overlay = document.getElementById("overlay");
+
+ function openSidebar() {
+   sidebar.style.right = "0";
+   overlay.style.display = "block";
+ }
+
+ function closeSidebar() {
+   sidebar.style.right = "-250px";
+   overlay.style.display = "none";
+ }
+
+ // Shrink header on scroll
+ window.addEventListener('scroll', function () {
+   const header = document.querySelector('header');
+   if (window.scrollY > 50) {
+     header.style.padding = '10px 20px';
+   } else {
+     header.style.padding = '20px 20px';
+   }
+ });
+ </script>
+</body>
+</html>

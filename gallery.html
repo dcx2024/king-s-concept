@@ -11,24 +11,27 @@
 <body>
     <header>
         <h3>KING'Sconcept</h3>
-        <nav class="top-bar">
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="../gallery.html">GALLERY</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+        <button class="mobile-menu-btn" onclick="openSidebar()">
+          <i class='bx bx-menu'></i>
+</button>
+        <!-- Overlay -->
+        <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+      
+        <!-- Sidebar -->
+        <nav class="mobile-nav-bar" id="mobileSidebar">
+          <span class="close-btn" onclick="closeSidebar()">×</span>
+          <a href="index.html">HOME</a>
+          <a href="gallery.html">GALLERY</a>
+          <a href="#">ABOUT</a>
+          <a href="contact.html">CONTACT</a>
         </nav>
-        <button class="mobile-menu-btn">
-            <i class='bx bx-menu'></i>
-        </button>
     </header>
 
 
 
     <section class="featured-work">
         <div class="container">
-            <h3>Featured Work</h3>
+            <h3>GALLERY</h3>
             <div class="grid">
                 <div class="grid-item">
                     <img src="4.jpg" alt="Photo 1" loading="lazy">
@@ -57,14 +60,12 @@
                 <div class="grid-item">
                     <img src="/images/26.jpg" alt="photo 9" loading="lazy">
                 </div>
-                <div class="grid-item">
-                    <img src="/images/26.jpg" alt="photo 10" loading="lazy">
-                </div>
+              
                 <div class="grid-item">
                     <img src="/images/006A4525.jpg" alt="photo 11" loading="lazy">
                 </div>
                 <div class="grid-item">
-                    <img src="/images/26.jpg" alt="photo 12" loading="lazy">
+                    <img src="/images/006A5766.jpg" alt="photo 12" loading="lazy">
                 </div>
             </div>
             <div class="view">
@@ -75,20 +76,79 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4>KING'Sconcepts</h4>
+                <p>Professional photographer capturing moments that tell compelling stories through creative and artistic vision.</p>
+            </div>      
+
+            <div class="footer-nav">
+                <ul>
+                    <li class="list-title">Navigation</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-connect">
+                <ul>
+                    <li class="list-title">Connect</li>
+                    <li class="social-icons">
+                        <a href="https://www.instagram.com/__kings_concepts__/" target="_blank"
+                        onclick="window.location.href='instagram://user?username=__kings_concepts__';">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://wa.me/+2347026538037" target="_blank"
+                        onclick="window.location.href='whatsapp://send?phone=+2347026538037';">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@__kings_concepts__?_t=ZM-8v95EQ8fET1&_r=1"
+                         target="_blank">
+                        <i class='bx bxl-tiktok'></i>
+                     </a>
+                     
+                    </li>
+                </ul>
+
+                <ul class="contact-info">
+                    <li class="list-title">Contact</li>
+                    <li>ihedoroking@gmail.com</li>
+                    <li>+2347026538037</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 King's Concepts Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
 
     <script>
-        // Mobile menu functionality
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const closeMenuBtn = document.querySelector('.close-menu');
-        const mobileNav = document.querySelector('.mobile-nav');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.add('active');
-        });
-        
-        closeMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-        });
+         const sidebar = document.getElementById("mobileSidebar");
+    const overlay = document.getElementById("overlay");
+
+    function openSidebar() {
+      sidebar.style.right = "0";
+      overlay.style.display = "block";
+    }
+
+    function closeSidebar() {
+      sidebar.style.right = "-250px";
+      overlay.style.display = "none";
+    }
+
+    // Shrink header on scroll
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.style.padding = '10px 20px';
+      } else {
+        header.style.padding = '20px 20px';
+      }
+    });
     </script>
 </body>
 </html>
